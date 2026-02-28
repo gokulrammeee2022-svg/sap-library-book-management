@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZZLIC_LIB_BOOK_MNT_1313'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZZLIC_LIB_BOOK_MNT_1313'
+  }
+}
+define service ZZLIUI_LIB_BOOK_MNT_13_O413 provider contracts odata_v4_ui {
+  expose ZZLIC_LIB_BOOK_MNT_1313;
+}

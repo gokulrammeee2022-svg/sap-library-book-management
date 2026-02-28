@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZZLIC_LIB_BOOK_MNT_1313'
+@MappingRole: true
+define role ZZLIC_LIB_BOOK_MNT_1313 {
+  grant select on ZZLIC_LIB_BOOK_MNT_1313
+  where INHERITING CONDITIONS FROM ENTITY ZZLIR_LIB_BOOK_MNT_1313 REPLACING { ROOT WITH _BaseEntity };
+}

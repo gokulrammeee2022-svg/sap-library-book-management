@@ -1,0 +1,59 @@
+managed implementation in class ZZLIBP_R_LIB_BOOK_MNT_1313 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZZLIR_LIB_BOOK_MNT_1313 alias ZzlirLibBookMnt1313
+persistent table ZLIB_BOOK_MNT_13
+extensible
+draft table ZZLILB_BK_MN_D13
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   BookID;
+
+  field ( readonly )
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   BookID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZLIB_BOOK_MNT_13 corresponding extensible
+  {
+    BookID = BOOK_ID;
+    Title = TITLE;
+    Author = AUTHOR;
+    Category = CATEGORY;
+    Language = LANGUAGE;
+    Edition = EDITION;
+    NoPages = NO_PAGES;
+    PublishDate = PUBLISH_DATE;
+    Available = AVAILABLE;
+    TotalCopies = TOTAL_COPIES;
+    SelfNum = SELF_NUM;
+    Price = PRICE;
+    Currency = CURRENCY;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}

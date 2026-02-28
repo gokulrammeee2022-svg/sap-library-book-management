@@ -1,0 +1,10 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Type ZZLILIB_BOOK_MNT_1313",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "typeCategory": "businessObject",
+  "name": "ZZLILIB_BOOK_MNT_1313"
+}
